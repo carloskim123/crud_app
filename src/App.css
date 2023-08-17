@@ -1,38 +1,132 @@
-.App {
+div,
+p,
+h2,
+h3,
+h4,
+h5,
+button,
+input {
+  font-size: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type='text'] {
+  width: 60%;
+  padding: 10px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  
+
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.good-text{
+  word-break:break-all;
+  max-height: 100px;
+}
+
+
+
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #073d77;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 10px;
+  border: 2px solid;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #dee2e6;
 }
 
-.App-link {
-  color: #61dafb;
+li:hover {
+  background-color: #ced4da;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.good-text {
+  margin-right: auto;
+}
+
+li.done {
+  text-decoration: line-through;
+}
+
+li form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li input[type='text'] {
+  flex: 1;
+  margin-right: 10px;
+}
+
+li button {
+  margin-left: 10px;
+  transition: 100ms;
+}
+li button:nth-child(1):hover {
+  background-color: rgb(247, 42, 42);
+}
+li button:nth-child(2):hover {
+  background-color: rgb(3, 168, 3);
+}
+
+li.slide-in {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+li.slide-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+li.slide-in.inactive {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.done {
+  text-decoration: line-through;
 }
